@@ -1,0 +1,6 @@
+parameters:
+- name: any
+  type:
+    name: any
+trainingPhrases:
+- ($any 'phrase' auto=false)

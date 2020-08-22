@@ -1,0 +1,23 @@
+variables:
+  MINIO_ACCESS_KEY: AKIAIOSFODNN7EXAMPLE
+  MINIO_SECRET_KEY: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+  PROJECT_NAME: heygoogle
+
+stages:
+  - process_en
+  - process_pl
+
+step-1:
+  image: qooba/rasa:1.10.10
+  stage: process_en
+  script:
+    - ./pipeline.sh en
+  interruptible: true
+
+step-2:
+  image: qooba/rasa:1.10.10
+  stage: process_pl
+  script:
+    - ./pipeline.sh pl
+  interruptible: true
+

@@ -1,0 +1,4 @@
+intentEvents:
+- handler:
+    webhookHandler: doAny
+  intent: user_utterance
